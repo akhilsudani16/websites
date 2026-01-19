@@ -8,21 +8,27 @@
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 ">
 
             <form method="POST" action="/note">
-
                 <input type="hidden" name="id" value="<?php echo $note['id'] ?>">
                 <div class="col-span-full">
-                    <label for="body" class="block text-sm/6 font-medium">Body</label>
-                    <div class="mt-2">
-                                        <textarea id="body" name="body"
-                                                  class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text- outline-1 -outline-offset-1 outline-/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
-                                              <?= $note['body'] ?>
-                                        </textarea>
 
-                    </div>
-                    <div>
+
+                    <div class="mt-2">
                         <label for="user_id" class="block text-sm/6 font-medium">Enter Your ID</label>
                         <input type="number" id="user_id" name="user_id"
                                class="block w-full rounded-md bg-/5 px-3 py-1.5 text-base text- outline-1 -outline-offset-1 outline-/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+                    </div>
+                    <div>
+                        <label for="title" class="block text-sm/6 font-medium">title</label>
+                        <input type="text" id="title" name="title"
+                               class="block w-full rounded-md bg-/5 px-3 py-1.5 text-base text- outline-1 -outline-offset-1 outline-/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+
+                    </div>
+                    <div>
+                        <label for="body" class="block text-sm/6 font-medium">Body</label>
+                         <textarea id="body" name="body"
+                                   class="block w-full rounded-md  px-3 py-1.5 text-base text- outline-1 -outline-offset-1 outline-/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6">
+                                        </textarea>
+
                     </div>
 
                 </div>
@@ -52,6 +58,7 @@
     </main>
 </div>
 
+<?php //= $note['body'] ?>
 <?php require('partials/footer.php') ?>
 
 

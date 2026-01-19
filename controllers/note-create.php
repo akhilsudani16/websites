@@ -10,10 +10,11 @@ $db = new Database($config['database']);
 $errors = [];
 
 $Validator = new Validator();
-//
-//if (! Validator::string($_POST['title'], 1, 1000)) {
-//    $errors['title'] = 'A body of no more than 1,000 characters is required.';
-//}
+
+
+if (! Validator::string($_POST['title'], 1, 1000)) {
+    $errors['title'] = 'A body of no more than 1,000 characters is required.';
+}
 
 if(empty($errors)){
     if($_SERVER["REQUEST_METHOD"] === "POST") {
