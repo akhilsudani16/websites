@@ -4,7 +4,7 @@
      'database' =>[
     'host' => 'localhost',
     'port' => '3306',
-    'dbname' => 'myapp',
+    'dbname' => 'phptest',
     'charset' => 'utf8mb4'
      ]
 ];

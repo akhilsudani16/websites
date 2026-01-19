@@ -6,21 +6,25 @@
         <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
 
          <form method="post">
+
+             <label for="title">Title</label>
+             <input type="text" name="title" id="title" required> <br><br>
+
              <label for="body">Body</label>
-             <div><textarea name="body" id="body"><?= $_POST['body'] ?? '' ?></textarea>
-             </div>
+             <textarea name="body" id="body" required></textarea><br><br>
 
-                 <?php if(isset($errors['body'])): ?>
+             <?php if(isset($errors['body'])): ?>
 
-                <?= $errors['body']; ?>
+                 <?= $errors['body']; ?>
 
-                 <?php endif; ?>
+             <?php endif; ?>
 
-                <p>
-                    <button name="submit">Submit</button>
-                </p>
+             <button name="submit">Submit</button>
+
          </form>
         </div>
     </main>
 
 <?php require('partials/footer.php') ?>
+
+<?php //= $_POST['body'] ?? '' ?>

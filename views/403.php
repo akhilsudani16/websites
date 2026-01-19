@@ -7,7 +7,7 @@
             <h1 class="text-3xl">You Are Not authorized To View This Page</h1>
 
             <p class="mt-5">
-                <a href="/" class="text-blue-500 underline">Go Back Home Page</a>
+                <a href="/notes" class="text-blue-500 underline">Go Back Notes...</a>
             </p>
         </div>
     </main>
