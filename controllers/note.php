@@ -15,9 +15,9 @@ if (! $note){
     abort();
 }
 
-authorize($note['users_id'] !== $currentUserId);
+authorize($note['users_id'] === $currentUserId);
 
-if ($note['users_id'] === $currentUserId)
+if ($note['users_id'] !== $currentUserId)
 {
     abort(Response::FORBIDDEN);
 }
