@@ -1,6 +1,6 @@
 <?php
 
-use app\Core\Session;
+use Core\Session;
 use Core\ValidationException;
 
 const BASE_PATH = __DIR__ . '/../';
@@ -12,7 +12,7 @@ session_start();
 require BASE_PATH . 'app/Core/functions.php';
 require BASE_PATH . 'app/bootstrap.php';
 
-$router = new \app\Core\Router();
+$router = new Core\Router();
 $routes = require base_path('routes.php');
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];

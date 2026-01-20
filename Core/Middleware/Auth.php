@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Core\Middleware;
+namespace Core\Middleware;
 
 class Auth
 {

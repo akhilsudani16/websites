@@ -1,6 +1,6 @@
 <?php
 
-use app\Core\Response;
+use Core\Response;
 
 function dd($value) {
     echo "<pre>";
@@ -40,5 +40,5 @@ function redirect($path) {
 }
 
 function old($key, $default = '') {
-    return \app\Core\Session::get('old')[$key] ?? $default;
+    return Core\Session::get('old')[$key] ?? $default;
 }

@@ -2,8 +2,6 @@
 
 use Core\App;
 use Core\Database;
-use Core\Validator;
-use Core\Session;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
