@@ -1,15 +1,13 @@
-<?php require('partials/head.php') ?>
-<?php require('partials/nav.php') ?>
+<?php require "partials/head.php"; ?>
+<?php require "partials/nav.php"; ?>
 
-    <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+<main>
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-white">
 
-            <h1 class="text-3xl">You Are Not authorized To View This Page</h1>
-
-            <p class="mt-5">
-                <a href="/notes" class="text-blue-500 underline">Go Back Notes...</a>
-            </p>
-        </div>
-    </main>
-
-<?php require('partials/footer.php') ?>
+        <h1 class = "text-2xl font-bold">You Are Not Authorized To View This Page.</h1>
+        <p class="mt-6">
+            <a href="/notes" class="text-blue underline"> Go Back Home</a>
+        </p>
+    </div>
+</main>
+<?php require "partials/footer.php"; ?>

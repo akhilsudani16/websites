@@ -1,13 +1,13 @@
 <?php
 
-$config = require '../config.php';
-$db = new Database($config['database']);
+use app\Core\App;
+use app\Core\Database;
 
-$heading = 'My Notes';
+$db = App::resolve(Database::class);
 
-$currentUser = 1;
+$notes = $db->query('select * from notes where user_id = 1')->get();
 
-$notes = $db->query("SELECT * FROM notes where user_id =  '$currentUser'")->fetchAll();
-
-require "../views/notes.view.php";
-
+view("notes/index.view.php", [
+    'heading' => 'My Notes',
+    'notes' => $notes
+]);

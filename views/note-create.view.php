@@ -1,30 +1,34 @@
-<?php require('partials/head.php') ?>
-<?php require('partials/nav.php') ?>
-<?php require('partials/banner.php') ?>
+<?php require base_path("view/partials/header.php") ?>
+<?php require base_path("view/partials/nav.php") ?>
+<?php require base_path("view/partials/banner.php") ?>
 
+
+<div class="min-h-full">
     <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 text-white">
 
-         <form method="post">
+            <ul class="mb-5">
 
-             <label for="title">Title</label>
-             <input type="text" name="title" id="title" required> <br><br>
+                <?php foreach ($notes as $note) : ?>
 
-             <label for="body">Body</label>
-             <textarea name="body" id="body" required></textarea><br><br>
+                    <li>
+                        <a href="/note?id=<?= $note['id'] ?>" class="text-blue-500 hover:underline">
 
-             <?php if(isset($errors['body'])): ?>
+                            <?= HTMLSPECIALCHARS($note['body']); ?>
 
-                 <?= $errors['body']; ?>
+                        </a>
+                    </li>
 
-             <?php endif; ?>
+                <?php endforeach; ?>
 
-             <button name="submit">Submit</button>
+            </ul>
 
-         </form>
+            <a href="/notes/create" class="text-blue-500 hover:underline">Create Note</a>
         </div>
     </main>
+</div>
 
-<?php require('partials/footer.php') ?>
+<?php require base_path("view/partials/footer.php") ?>
 
-<?php //= $_POST['body'] ?? '' ?>
+
+
